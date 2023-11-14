@@ -1,4 +1,4 @@
-package com.example.j_logistic
+package com.example.flutter_megaloman
 
 import io.flutter.embedding.android.FlutterActivity
 

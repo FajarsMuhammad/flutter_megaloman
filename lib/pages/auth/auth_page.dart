@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_megaloman/common/constant/colors.dart';
+import 'package:flutter_megaloman/pages/home_page.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -41,7 +43,7 @@ class _AuthPageState extends State<AuthPage> {
                         labelText: 'Email',
                         prefixIcon: Icon(
                           Icons.email,
-                          color: Colors.grey,
+                          color: ColorName.loginGray,
                         ),
                         fillColor: Colors.green),
                   ),
@@ -91,7 +93,14 @@ class _AuthPageState extends State<AuthPage> {
                                   const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.zero,
                                       side: BorderSide(color: Colors.green)))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const HomePage();
+                          }),
+                        );
+                      },
                       child: const Text(
                         'Masuk',
                         style: TextStyle(color: Colors.white),

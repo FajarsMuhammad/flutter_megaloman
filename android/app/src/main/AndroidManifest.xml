@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="j_logistic"
+        android:label="flutter_megaloman"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

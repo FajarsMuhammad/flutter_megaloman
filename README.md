@@ -1,4 +1,4 @@
-# j_logistic
+# flutter_megaloman
 
 A new Flutter project.
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:j_logistic/common/constant/images.dart';
-import 'package:j_logistic/pages/auth/auth_page.dart';
+
+import '../../common/constant/images.dart';
+import 'auth_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

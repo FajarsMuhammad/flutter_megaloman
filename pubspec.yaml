@@ -1,4 +1,4 @@
-name: j_logistic
+name: flutter_megaloman
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -78,6 +78,10 @@ flutter:
     - family: sakkal-majalla
       fonts:
         - asset: assets/fonts/Sakkal-Majalla-Regular.ttf
+    - family: trebuchet-ms
+      fonts:
+        - asset: assets/fonts/trebuc.ttf
+        - asset: assets/fonts/Trebuchet-MS-Italic.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
