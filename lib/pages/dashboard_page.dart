@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_megaloman/common/constant/colors.dart';
+import 'package:flutter_megaloman/common/widgets/menu_card.dart';
 import 'package:flutter_megaloman/common/widgets/search_input.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -17,7 +17,12 @@ class _DashboardPageState extends State<DashboardPage> {
       padding: const EdgeInsets.all(20.0),
       children: [
         SearchInput(controller: searchController),
-        const SizedBox(height: 40.0),
+        const SizedBox(height: 20.0),
+        MenuCard(
+          label: 'label',
+          backgroundColor: const Color(0xffFFB023),
+          onPressed: () {},
+        )
       ],
     );
   }
