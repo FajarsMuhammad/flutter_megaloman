@@ -12,6 +12,14 @@ class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Row(
+          children: [
+            SizedBox(width: 10),
+            Text('Settings'),
+          ],
+        ),
+      ),
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

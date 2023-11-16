@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_megaloman/common/constant/environment.dart';
 import 'package:flutter_megaloman/data/models/request/auth_request_model.dart';
@@ -20,7 +18,6 @@ class AuthRemoteDataSource {
         headers: headers,
         body: requestModel.toJson(),
       );
-      print('Response: $response');
       switch (response.statusCode) {
         case 200:
           return Right(AuthResponseModel.fromJson(response.body));
