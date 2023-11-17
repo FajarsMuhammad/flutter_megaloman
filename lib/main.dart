@@ -14,12 +14,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeData darkTheme = ThemeData(
+      textTheme: const TextTheme(
+        displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+        bodyLarge: TextStyle(fontSize: 18, color: Colors.white70),
+      ),
+      appBarTheme: const AppBarTheme(
+        color: Colors.red,
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.red,
+        brightness: Brightness.dark,
+      ),
+    );
     return MaterialApp(
       title: 'Megaloman',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        //useMaterial3: true,
         primarySwatch: Colors.blue,
         primaryColor: Colors.white,
         // textTheme: const TextTheme(
@@ -27,6 +39,8 @@ class MyApp extends StatelessWidget {
         // ),
         fontFamily: 'trebuchet-ms',
       ),
+
+      //theme: darkTheme,
       home: const SplashPage(),
     );
   }

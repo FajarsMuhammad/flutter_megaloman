@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_megaloman/pages/dashboard_page.dart';
+import 'package:flutter_megaloman/pages/home_page.dart';
 
 import '../../common/constant/images.dart';
 import 'auth_page.dart';
@@ -17,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const AuthPage())));
+            MaterialPageRoute(builder: (context) => const HomePage())));
   }
 
   @override

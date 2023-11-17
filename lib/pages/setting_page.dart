@@ -14,7 +14,9 @@ class _SettingPageState extends State<SettingPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Icon(Icons.settings),
             SizedBox(width: 10),
             Text('Settings'),
           ],
