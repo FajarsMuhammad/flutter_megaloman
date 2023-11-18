@@ -13,42 +13,38 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  final searchController = TextEditingController();
+  PageController pageController = PageController(viewportFraction: 0.85);
+  var _currPageValue = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    pageController.addListener(() {
+      setState(() {
+        _currPageValue = pageController.page!;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    pageController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final searchController = TextEditingController();
-    PageController pageViewController = PageController();
-    int _curr = 0;
-
-    final List<Widget> _pages = [
-      Center(
-        child: Text(
-          'First Page',
-          style: TextStyle(fontSize: 22),
-        ),
-      ),
-      Center(
-        child: Text(
-          'Second Page',
-          style: TextStyle(fontSize: 22),
-        ),
-      ),
-      Center(
-        child: Text(
-          'Third Page',
-          style: TextStyle(fontSize: 22),
-        ),
-      ),
-    ];
-
     return ListView(
       padding: const EdgeInsets.all(20.0),
       children: [
         SearchInput(controller: searchController),
         const SizedBox(height: 20.0),
-        PageViews(),
-        SizedBox(
-          height: 20,
+        PageViews(
+          controller: pageController,
+          currPageValue: _currPageValue,
         ),
+        const SizedBox(height: 20),
         // const RecipeCard(
         //   title: 'My recipe',
         //   rating: '4.9',
